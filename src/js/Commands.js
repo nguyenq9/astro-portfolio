@@ -92,12 +92,12 @@ function exec(command) {
   // When I'm not in class or at work, you can find me playing pickleball, disc golf, or trying new recipes.</pre>
   //       `
   //       break;
-      case 'echo':
-        displayOutput('echoing your mom')
-        break;
-      case 'trivia':
-        displayOutput('fetching trivia.... Wait.... youre too dumb!')
-        break;
+      // case 'echo':
+      //   displayOutput('echoing your mom')
+      //   break;
+      // case 'trivia':
+      //   displayOutput('fetching trivia.... Wait.... youre too dumb!')
+      //   break;
       default:
         displayOutput("Command not recognized.");
     }
