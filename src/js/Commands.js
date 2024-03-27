@@ -64,42 +64,22 @@ function displayBanner() {
 }
   
 function exec(command) {
-    switch (command) {
-      case 'clear':
-        outputDiv.innerHTML = "";
-        break;
-      case 'help':
-        displayHelp()
-        break;
-      case 'banner':
-        displayBanner()
-        break;
-      case 'social':
-        displaySocial()
-        break;
-      case 'projects':
-        displayProjects()
-        break;
-  //     case 'about':
-  //       outputDiv.innerHTML += `
-  //       <pre style="line-height:1.5">
-  // Hi, my name is Thai Nguyen!👋
-  // I'm a budding web developer and Computer Science student at Western Washington University. 
-  // I like to build engaging websites and make cool apps using AI tools like Azure Computer Vision 
-  // and Vertex AI. In the past, I was a math and computer science tutor at Western, helping students
-  // better understand concepts taught in their classes. I'm currently working for Western's 
-  // Web Communications Technology team to build web pages and web apps that will help the university. 
-  // When I'm not in class or at work, you can find me playing pickleball, disc golf, or trying new recipes.</pre>
-  //       `
-  //       break;
-      // case 'echo':
-      //   displayOutput('echoing your mom')
-      //   break;
-      // case 'trivia':
-      //   displayOutput('fetching trivia.... Wait.... youre too dumb!')
-      //   break;
-      default:
-        displayOutput("Command not recognized.");
+    if (commmand === 'clear') {
+      outputDiv.innerHTML = "";
+    } else if (commmand === 'help') {
+      displayHelp();
+    } else if (commmand === 'banner') {
+      displayBanner();
+    } else if (commmand === 'social') {
+      displaySocial();
+    } else if (commmand === 'projects') {
+      displayProjects();
+    } else if (command === 'test') {
+      displayOutput("Test command");
+    } else if (command === 'about') {
+      displayAbout();
+    } else {
+      displayOutput("Command not recognized.");
     }
 }
 
