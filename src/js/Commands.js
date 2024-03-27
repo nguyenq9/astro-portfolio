@@ -74,10 +74,10 @@ function exec(command) {
       displaySocial();
     } else if (commmand === 'projects') {
       displayProjects();
-    } else if (command === 'test') {
+    }  else if (command === 'test') {
       displayOutput("Test command");
-    } else if (command === 'about') {
-      displayAbout();
+    } else if (command === 'echo') {
+      displayOutput("echo command");
     } else {
       displayOutput("Command not recognized.");
     }
