@@ -38,13 +38,20 @@ function displayProjects() {
 }
 
 
-// function displayAbout() {
-//   displayOutput("Hi my name is Thai Nguyen! 👋<br>I'm a budding web developer and Computer Science student at Western Washington University.<br>I like to build engaging websites and make cool apps using AI tools like Azure Computer Vision <br>and Vertex AI. In the past, I was a math and computer science tutor at Western, helping students<br>better understand concepts taught in their classes. I'm currently working for Western's <br>Web Communications Technology team to build web pages and web apps that will help the university.<br>When I'm not in class or at work, you can find me playing pickleball, disc golf, or trying new recipes.")
-// }
 
-// function displayAbout() {
-//   outputDiv.innerHTML += `<span>Hi my name is Thai Nguyen! 👋<br>I'm a budding web developer and Computer Science student at Western Washington University.<br>I like to build engaging websites and make cool apps using AI tools like Azure Computer Vision <br>and Vertex AI. In the past, I was a math and computer science tutor at Western, helping students<br>better understand concepts taught in their classes. I'm currently working for Western's <br>Web Communications Technology team to build web pages and web apps that will help the university.<br>When I'm not in class or at work, you can find me playing pickleball, disc golf, or trying new recipes.</span>`
-// }
+function display() {
+  outputDiv.innerHTML += `<span>Hi my name is Thai Nguyen! 👋<br>I'm a budding web developer and Computer Science student at Western Washington University.<br>I like to build engaging websites and make cool apps using AI tools like Azure Computer Vision <br>and Vertex AI. In the past, I was a math and computer science tutor at Western, helping students<br>better understand concepts taught in their classes. I'm currently working for Western's <br>Web Communications Technology team to build web pages and web apps that will help the university.<br>When I'm not in class or at work, you can find me playing pickleball, disc golf, or trying new recipes.</span>`
+}
+
+function displayAbout() {
+    outputDiv.innerHTML += `
+    <pre> 
+    <span>Hi my name is Thai Nguyen! 👋</span>
+    <span>I'm a budding web developer and Computer Science student at Western Washington University.</span>
+    <span>I like to build engaging websites and make cool apps using AI tools like Azure Computer Vision <br></span>
+    </pre>
+  `;
+}
 
 function displayBanner() {
           outputDiv.innerHTML += `
@@ -71,7 +78,7 @@ function exec(command) {
     } else if (command === 'projects') {
       displayProjects();
     } else if (command === 'about') {
-      displayOutput("Hi my name is Thai Nguyen.")
+      displayAbout();
     } else if (command === 'all') {
       displayBanner();
       displaySocial();
