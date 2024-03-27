@@ -1,4 +1,4 @@
-import { displayTrivia } from "./Trivia";
+// import { displayTrivia } from "./Trivia";
 
 const outputDiv = document.getElementById("output");
 const inputField = document.getElementById("input");
@@ -85,7 +85,7 @@ function exec(command) {
         displayAbout()
         break;
       case 'trivia':
-        displayTrivia();
+        // displayTrivia();
         break;
       default:
         displayOutput("Command not recognized.");
