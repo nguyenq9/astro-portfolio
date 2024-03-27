@@ -6,7 +6,7 @@ inputField.style.width = inputField.value.length + "ch";
 
 
 function executeCommand(command) {
-    displayOutput(`<span id="commandSignature" style="color:#21f838;line-height:1.5">guest@thainguyen.com:~$</span>&nbsp${command}`);
+    displayOutput(`<span id="commandSignature" style="color:#21f838;line-height:1.5;margin-right:4px">guest@thainguyen.com:~$</span>&nbsp${command}`);
     exec(command)
     inputField.scrollIntoView()
 }

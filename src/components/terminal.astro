@@ -31,7 +31,7 @@
 
 <style is:global>
   #terminal {
-    width: 70%;
+    /* width: 70%; */
     margin: 0 auto;
     /* background-color: red; */
     padding: 20px;
@@ -64,12 +64,12 @@
     resize: none;
     outline: none;
     width: min-content;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   #cursor {
-    width: 10px;
-    height: 25px;
+    width: 8px;
+    height: 18px;
     background: #21f838;
     animation: blink-animation 1s step-end infinite;
     z-index: 2;
@@ -93,6 +93,25 @@
   #commandOptions {
     line-height: 1.5;
     /* margin-left: 2em */
+    color: fuchsia;
+    text-shadow: fuchsia 2px 0 5px;
+  }
+
+  #socialOptions {
+    line-height: 1.5;
+    /* margin-left: 2em */
+    color: cyan;
+    text-shadow: cyan 2px 0 5px;
+  }
+
+  #socialLinks a {
+    text-decoration: none;
+    color: #fcefef;
+  }
+
+  #socialLinks a:hover {
+    color: black;
+    background-color: #fcefef;
   }
 
 </style>
