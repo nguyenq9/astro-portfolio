@@ -36,9 +36,9 @@ function displayProjects() {
 }
 
 
-function displayAbout() {
-  displayOutput("Hi my name is Thai Nguyen! 👋<br>I'm a budding web developer and Computer Science student at Western Washington University.<br>I like to build engaging websites and make cool apps using AI tools like Azure Computer Vision <br>and Vertex AI. In the past, I was a math and computer science tutor at Western, helping students<br>better understand concepts taught in their classes. I'm currently working for Western's <br>Web Communications Technology team to build web pages and web apps that will help the university.<br>When I'm not in class or at work, you can find me playing pickleball, disc golf, or trying new recipes.")
-}
+// function displayAbout() {
+//   displayOutput("Hi my name is Thai Nguyen! 👋<br>I'm a budding web developer and Computer Science student at Western Washington University.<br>I like to build engaging websites and make cool apps using AI tools like Azure Computer Vision <br>and Vertex AI. In the past, I was a math and computer science tutor at Western, helping students<br>better understand concepts taught in their classes. I'm currently working for Western's <br>Web Communications Technology team to build web pages and web apps that will help the university.<br>When I'm not in class or at work, you can find me playing pickleball, disc golf, or trying new recipes.")
+// }
 
 function displayBanner() {
           outputDiv.innerHTML += `
@@ -67,7 +67,7 @@ function exec(command) {
     }  else if (command === 'test') {
       displayOutput("Test command");
     } else if (command === 'about') {
-      displayAbout();
+      displayOutput("Hi my name is Thai Nguyen! 👋<br>I'm a budding web developer and Computer Science student at Western Washington University.<br>I like to build engaging websites and make cool apps using AI tools like Azure Computer Vision <br>and Vertex AI. In the past, I was a math and computer science tutor at Western, helping students<br>better understand concepts taught in their classes. I'm currently working for Western's <br>Web Communications Technology team to build web pages and web apps that will help the university.<br>When I'm not in class or at work, you can find me playing pickleball, disc golf, or trying new recipes.")
     } else {
       displayOutput("Command not recognized.");
     }
