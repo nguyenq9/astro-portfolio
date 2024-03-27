@@ -66,12 +66,18 @@ function exec(command) {
       displaySocial();
     } else if (command === 'projects') {
       displayProjects();
-    }  else if (command === 'test') {
+    }  
+    else if (command === 'test') {
       displayOutput("Test command");
-    } else if (command === 'about') {
+    } 
+    else if (command === 'ghost') {
+      displayOutput("casper");
+    } 
+    else if (command === 'oop') {
+      displayOutput("oop oop");
+    } 
+    else if (command === 'about') {
       displayOutput("Hi my name is Thai Nguyen! ")
-    } else if (command === 'trivia') {
-      displayTrivia();
     }
     
     else {
