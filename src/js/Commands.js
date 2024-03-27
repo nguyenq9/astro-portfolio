@@ -1,3 +1,5 @@
+import { displayTrivia } from "./Trivia";
+
 const outputDiv = document.getElementById("output");
 const inputField = document.getElementById("input");
 const terminal = document.getElementById("terminal");
@@ -68,7 +70,11 @@ function exec(command) {
       displayOutput("Test command");
     } else if (command === 'about') {
       displayOutput("Hi my name is Thai Nguyen! ")
-    } else {
+    } else if (command === 'trivia') {
+      displayTrivia();
+    }
+    
+    else {
       displayOutput("Command not recognized.");
     }
 }
