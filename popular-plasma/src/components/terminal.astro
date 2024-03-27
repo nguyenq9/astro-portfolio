@@ -1,5 +1,15 @@
 <div id="terminal">
-  <div id="output"></div>
+  <div id="output">
+    <pre>
+      ████████╗██╗  ██╗ █████╗ ██╗    ███╗   ██╗ ██████╗ ██╗   ██╗██╗   ██╗███████╗███╗   ██╗
+      ╚══██╔══╝██║  ██║██╔══██╗██║    ████╗  ██║██╔════╝ ██║   ██║╚██╗ ██╔╝██╔════╝████╗  ██║
+         ██║   ███████║███████║██║    ██╔██╗ ██║██║  ███╗██║   ██║ ╚████╔╝ █████╗  ██╔██╗ ██║
+         ██║   ██╔══██║██╔══██║██║    ██║╚██╗██║██║   ██║██║   ██║  ╚██╔╝  ██╔══╝  ██║╚██╗██║
+         ██║   ██║  ██║██║  ██║██║    ██║ ╚████║╚██████╔╝╚██████╔╝   ██║   ███████╗██║ ╚████║
+         ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝    ╚═╝  ╚═══╝ ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═══╝
+    </pre>                        
+    <span>For a list of available commands, type <span id="help-text">'help'</span>.<br></span>
+  </div>
   <div id="input-container">
     <span>guest@thainguyen.com:~$</span>
     <div id="input-wrapper">
@@ -8,71 +18,33 @@
         id="input"
         autofocus
         spellcheck="false"
-        autocomplete="false"
+        autocomplete="off"
         name="command"
+        maxlength="20"
       />
       <div id="cursor"></div>
     </div>
   </div>
 </div>
 
-<script>
-  const outputDiv = document.getElementById("output");
-  const inputField = document.getElementById("input");
-  inputField.style.width = inputField.value.length + 1 + "ch";
-
-  function displayOutput(output) {
-    outputDiv.innerHTML += `<p>${output}</p>`;
-    outputDiv.scrollTop = outputDiv.scrollHeight;
-  }
-
-  function executeCommand(command) {
-    // Add your command execution logic here
-    displayOutput(`$ ${command}`);
-    // Example: echo command
-    if (command.startsWith("echo")) {
-      displayOutput(command.slice(5));
-    } else if (command === "clear") {
-      outputDiv.innerHTML = ""; // Clear the output area
-    } else {
-      displayOutput("Command not recognized.");
-    }
-  }
-
-  inputField.addEventListener("focus", function () {
-    document.getElementById("cursor").style.display = "block";
-  });
-
-  inputField.addEventListener("blur", function () {
-    document.getElementById("cursor").style.display = "none";
-  });
-
-  inputField.addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-      const command = inputField.value.trim();
-      if (command !== "") {
-        executeCommand(command);
-        inputField.value = "";
-      }
-    }
-
-    this.style.width = this.value.length + 1 + "ch";
-  });
-
-  inputField.addEventListener("keydown", function (event) {
-    if (event.key === "Backspace") {
-      this.style.width = this.value.length - 1 + "ch";
-    }
-  });
-</script>
+<script src="../js/Terminal.js"></script>
 
 <style>
+  #terminal {
+    width: 70%;
+    margin: 0 auto;
+    /* background-color: red; */
+    padding: 20px;
+  }
+
   #input-container {
     display: flex;
   }
 
   #input-container span {
     color: #00ff00;
+    /* background-color: red; */
+    line-height: 1.5;
   }
 
   #input-wrapper {
@@ -82,23 +54,29 @@
   }
 
   #input {
+    /* caret-color: red; */
     caret-color: transparent;
     font-family: monospace;
     color: #fff;
     border: none;
     background-color: transparent;
+    /* background-color: red; */
     resize: none;
     outline: none;
     width: min-content;
+    font-size: 20px;
   }
 
   #cursor {
-    width: 5px;
-    height: 14px;
+    width: 10px;
+    height: 25px;
     background: #21f838;
     animation: blink-animation 1s step-end infinite;
     z-index: 2;
-    display: none; /* Initially hide the cursor */
+  }
+
+  #commandSignature {
+    color: #21f838;
   }
 
   @keyframes blink-animation {
@@ -106,4 +84,10 @@
       opacity: 0;
     }
   }
+
+  #help-text {
+    color: red;
+    text-shadow: red 2px 0 5px;
+  }
+
 </style>
