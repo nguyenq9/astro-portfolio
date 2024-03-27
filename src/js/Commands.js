@@ -84,9 +84,11 @@ function exec(command) {
       displayOutput("echo command");
     } else if (command === 'about') {
       displayAbout();
-    } else if (command === 'trivia') {
-      displayTrivia();
-    } else {
+    }
+    //  else if (command === 'trivia') {
+    //   displayTrivia();
+    // } 
+    else {
       displayOutput("Command not recognized.");
     }
 }
