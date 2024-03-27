@@ -66,8 +66,8 @@ function exec(command) {
       displayProjects();
     }  else if (command === 'test') {
       displayOutput("Test command");
-    } else if (command === 'echo') {
-      displayOutput("echo command");
+    } else if (command === 'about') {
+      displayAbout();
     } else {
       displayOutput("Command not recognized.");
     }
