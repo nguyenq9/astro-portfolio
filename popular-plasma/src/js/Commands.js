@@ -4,8 +4,26 @@ const terminal = document.getElementById("terminal");
 
 function displayOutput(output) {
     outputDiv.innerHTML += `<span style="line-height:1.5;">${output}<br></span>`;
-    terminal.scrollTop = terminal.scrollHeight;
-  }
+}
+
+
+function displayHelp() {
+    outputDiv.innerHTML += `
+        <pre style="line-height:0;"> 
+    <span id="commandOptions" >about        Who is Thai?<br></span>
+    <span id="commandOptions" >projects     View coding projects<br></span>
+    <span id="commandOptions" >social       Display social media links<br></span>
+    <span id="commandOptions" >email        Send me an email<br></span>
+    <span id="commandOptions" >help         Displays available commands<br></span>
+    <span id="commandOptions" >banner       Display the header<br></span>
+        </pre>
+    `;
+}
+
+function displaySocial() {
+    
+}
+
   
 
 function exec(command) {
@@ -14,9 +32,7 @@ function exec(command) {
       } else if (command === "clear") {
         outputDiv.innerHTML = "";
       } else if (command === "help") {
-        displayOutput("banner")
-        displayOutput("clear")
-        displayOutput("echo")
+        displayHelp()
       } else if (command === "banner") {
         outputDiv.innerHTML += `
         <pre>
