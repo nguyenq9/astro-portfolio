@@ -64,15 +64,15 @@ function displayBanner() {
 }
   
 function exec(command) {
-    if (commmand === 'clear') {
+    if (command === 'clear') {
       outputDiv.innerHTML = "";
-    } else if (commmand === 'help') {
+    } else if (command === 'help') {
       displayHelp();
-    } else if (commmand === 'banner') {
+    } else if (command === 'banner') {
       displayBanner();
-    } else if (commmand === 'social') {
+    } else if (command === 'social') {
       displaySocial();
-    } else if (commmand === 'projects') {
+    } else if (command === 'projects') {
       displayProjects();
     }  else if (command === 'test') {
       displayOutput("Test command");
